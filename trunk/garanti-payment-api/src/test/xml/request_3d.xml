@@ -1,0 +1,40 @@
+<GVPSRequest>
+	<Mode>PROD</Mode>
+	<Version>v0.00</Version>
+	<Terminal>
+		<ProvUserID>PROVAUT</ProvUserID>
+		<HashData>hesaplanıp yazılacak</HashData>
+		<UserID>PROVAUT</UserID>
+		<ID>111995</ID>
+		<MerchantID>600218</MerchantID>
+	</Terminal>
+	<Customer>
+		<IPAddress>1.1.111.111</IPAddress>
+		<EmailAddress>Cem@cem.com</EmailAddress>
+	</Customer>
+	<Card>
+		<Number></Number>
+		<ExpireDate></ExpireDate>
+		<CVV2></CVV2>
+	</Card>
+	<Order>
+		<OrderID></OrderID>
+		<GroupID></GroupID>
+		<Description></Description>
+	</Order>
+	<Transaction>
+		<Type>sales</Type>
+		<InstallmentCnt></InstallmentCnt>
+		<Amount>1110</Amount>
+		<CurrencyCode>949</CurrencyCode>
+		<CardholderPresentCode>13</CardholderPresentCode> <!--3D için 13 olacaktır.-->
+		<MotoInd>H</MotoInd>
+		<Description></Description>
+		<Secure3D>
+			<AuthenticationCode>CAVV değeri</AuthenticationCode>
+			<SecurityLevel>ECI değeri</SecurityLevel>
+			<TxnID>XID değeri</TxnID>
+			<Md>MD değeri</Md>  <!-- Kart bilgileri yerine bu alan kullanılıyor.-->
+		</Secure3D>
+	</Transaction>
+</GVPSRequest>

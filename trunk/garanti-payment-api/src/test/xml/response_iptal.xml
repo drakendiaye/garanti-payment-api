@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GVPSResponse>
+	<Order>
+		<OrderID>SIST084ED2B6F3E144D694B4C62FCE4AC7A8</OrderID>
+	</Order>
+	<Transaction>
+		<Response>
+			<Source>HOST</Source>
+			<Code>00</Code>
+			<ReasonCode>00</ReasonCode>
+			<Message>Approved</Message>
+			<ErrorMsg />
+			<SysErrMsg />
+		</Response>
+		<RetrefNum>017215605208</RetrefNum>
+		<AuthCode>622784</AuthCode>
+		<BatchNum>000499</BatchNum>
+		<SequenceNum>000006</SequenceNum>
+		<ProvDate>20100621 15:53:14</ProvDate>
+		<HostMsgList />
+		<RewardInqResult>
+			<RewardList />
+			<ChequeList />
+		</RewardInqResult>
+	</Transaction>
+</GVPSResponse>

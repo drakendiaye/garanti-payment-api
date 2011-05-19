@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xs:complexType name="Secure3D">
+		<xs:sequence>
+			<xs:element name="AuthenticationCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="SecurityLevel" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="TxnID" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="Md" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>		
+
+	<xs:complexType name="RequestTransaction">
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="InstallmentCnt" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Amount" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="CurrencyCode" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="OriginalRetrefNum" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="CardholderPresentCode" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="MotoInd" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="Secure3D" type="Secure3D" minOccurs="0" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>		
+
+	<xs:complexType name="CommentType">
+		<xs:sequence>
+			<xs:element name="Number" type="xs:int" minOccurs="0" maxOccurs="1"/>		
+			<xs:element name="Text" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="CommentListType">
+		<xs:sequence>
+			<xs:element name="Comment" type="CommentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="RequestOrder">
+		<xs:sequence>
+			<xs:element name="OrderID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="GroupID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CommentList" type="CommentListType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Card">
+		<xs:sequence>
+			<xs:element name="Number" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ExpireDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CVV2" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Customer">
+		<xs:sequence>
+			<xs:element name="IPAddress" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Terminal">
+		<xs:sequence>
+			<xs:element name="ProvUserID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="HashData" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="UserID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="MerchantID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="GVPSRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Mode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Version" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Terminal" type="Terminal" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Customer" type="Customer" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Card" type="Card" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Order" type="RequestOrder" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Transaction" type="RequestTransaction" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
