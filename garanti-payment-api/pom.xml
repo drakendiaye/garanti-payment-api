@@ -8,7 +8,7 @@
 		Integration project with Garanti payment system.
 	</description>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.0-beta</version>
 	<developers>
 		<developer>
 			<id>sevgi.uslu</id>
@@ -16,6 +16,15 @@
 			<email>sevgi.uslu@gittigidiyor.com</email>
 			<roles>
 				<role>Developer</role>
+			</roles>
+			<timezone>GMT+2</timezone>
+		</developer>
+		<developer>
+			<id>hakan.erdogan</id>
+			<name>Hakan ERDOGAN</name>
+			<email>hakan.erdogan@gittigidiyor.com</email>
+			<roles>
+				<role>Google Code Integrator</role>
 			</roles>
 			<timezone>GMT+2</timezone>
 		</developer>
