@@ -1,0 +1,146 @@
+<GVPSRequest>
+	<Mode>Request Mode</Mode>
+	<Version>Request Version</Version>
+	<ChannelCode></ChannelCode>
+	<Terminal>
+		<ProvUserID>Request ProvUserID</ProvUserID>
+		<HashData>Request HashData</HashData>
+		<UserID>Request UserID</UserID>
+		<ID>Request ID</ID>
+		<MerchantID>Request MerchantID</MerchantID>
+	</Terminal>
+	<Customer>
+		<IPAddress>Request </IPAddress> <!--zorunlu-->
+		<EmailAddress>Request </EmailAddress>
+	</Customer>
+	<Card>
+		<Number>Request </Number>
+		<ExpireDate>Request </ExpireDate>
+		<CVV2>Request </CVV2>
+	</Card>
+	<Order>
+		<OrderID>RequestOrder OrderID</OrderID>
+		<GroupID>RequestOrder GroupID</GroupID>
+		<Description>RequestOrder Description</Description>
+		<ItemList>
+			<Item>
+				<Number>RequestOrderItem Number</Number>
+				<ProductID>RequestOrderItem ProductID</ProductID>
+				<ProductCode>RequestOrderItem ProductCode</ProductCode>
+				<Quantity>RequestOrderItem Quantity</Quantity>
+				<Price>RequestOrderItem Price</Price>
+				<TotalAmount>RequestOrderItem TotalAmount</TotalAmount>
+			</Item>
+		</ItemList>	
+		<AddressList>
+			<Address>
+				<Type>shippng/billng</Type> 
+				<Name>RequestOrderAddress Name</Name>
+				<LastName>RequestOrderAddress LastName</LastName>
+				<Company>RequestOrderAddress Company</Company>
+				<Text>RequestOrderAddress Text</Text>
+				<District>RequestOrderAddress District</District>
+				<City>RequestOrderAddress City</City>				
+				<Country>RequestOrderAddress Country</Country>
+				<PostalCode>RequestOrderAddress PostalCode</PostalCode>				
+				<PhoneNumber>RequestOrderAddress PhoneNumber</PhoneNumber>
+				<GsmNumber>RequestOrderAddress GsmNumber</GsmNumber>
+				<FaxNumber>RequestOrderAddress FaxNumber</FaxNumber>
+			</Address>
+		</AddressList>		
+		<Recurring>			
+			<Type>RequestOrderRecurring </Type><!--S:Sabit Tutarli   D:Degisken Tutar-->
+			<TotalPaymentNum>RequestOrderRecurring </TotalPaymentNum>
+			<FrequencyType>RequestOrderRecurring </FrequencyType> <!--Monthly, weekly, daily-->
+			<FrequencyInterval>RequestOrderRecurring </FrequencyInterval>
+			<StartDate>RequestOrderRecurring </StartDate>
+			<PaymentNum>RequestOrderRecurring </PaymentNum>
+			<PaymentList>
+				<Payment>
+					<PaymentNum>RequestOrderRecurringPayment PaymentNum</PaymentNum>					
+					<Amount>RequestOrderRecurringPayment Amount</Amount>
+					<DueDate>RequestOrderRecurringPayment DueDate</DueDate><!-- SSSS -->
+				</Payment>
+			</PaymentList>
+		</Recurring>
+		<CommentList> 	        
+			<Comment>
+				<Number>RequestOrderComment Number</Number>		
+				<Text>RequestOrderComment Text</Text>
+			</Comment> 
+		</CommentList>
+	</Order>
+	<Transaction>
+		<Type>RequestTransaction  Type</Type>
+		<InstallmentCnt>RequesTransactiont InstallmentCnt</InstallmentCnt>
+		<Amount>RequestTransaction Amount</Amount>
+		<CurrencyCode>RequestTransaction CurrencyCode</CurrencyCode>
+		<OriginalRetrefNum>RequestTransaction OriginalRetrefNum</OriginalRetrefNum>
+		<DelayDayCount>RequestTransaction DelayDayCount</DelayDayCount> 
+		<DownPaymentRate>RequestTransaction DownPaymentRate</DownPaymentRate>
+		<CardholderPresentCode>RequestTransaction CardholderPresentCode</CardholderPresentCode>		
+		<MotoInd>RequestTransaction MotoInd</MotoInd> <!-- Y/N -->
+		<CommercialCardExtendedCredit>
+			<PaymentList>
+				<Payment> 
+					<Number>Request </Number>
+					<DueDate>Request </DueDate>
+					<Amount>Request </Amount>
+				</Payment>
+			</PaymentList>
+		</CommercialCardExtendedCredit>
+		<UtilityPayment>
+			<SubscriberCode>Request </SubscriberCode>
+			<InvoiceID>Request </InvoiceID>
+		</UtilityPayment>
+		<GSMUnitSales>
+			<UnitID>Request </UnitID>
+			<Quantity>Request </Quantity>
+			<Amount>Request </Amount>
+		</GSMUnitSales>
+		<CepBank>
+			<GSMNumber>Request </GSMNumber>
+			<PaymentType>Credit / Debit / Account</PaymentType>
+		</CepBank>
+		<Secure3D>
+			<AuthenticationCode>RequestTransactionSecure3D AuthenticationCode</AuthenticationCode>
+			<SecurityLevel>RequestTransactionSecure3D SecurityLevel</SecurityLevel>
+			<TxnID>RequestTransactionSecure3D TxnID</TxnID>
+			<Md>RequestTransactionSecure3D Md</Md>
+		</Secure3D>
+		<RewardList>
+			<Reward>
+				<Type>MR, Bonus, Mil, FirmBasedBns, FirmBasedCheque</Type>
+				<UsedAmount>Request </UsedAmount>
+				<GainedAmount>Request </GainedAmount>
+			</Reward>
+		</RewardList>
+		<ChequeList>
+			<Cheque>
+				<Type>Player / Sozunuze urun</Type>		
+				<Amount>Request </Amount>
+				<Count>Request </Count> <!-- Player -->
+				<ID>Request </ID> <!-- Sozunuze urun-->
+				<Bitmap>Request </Bitmap>
+			</Cheque>
+		</ChequeList>
+		<MoneyCard>
+			<InvoiceAmount>Request </InvoiceAmount>
+			<MigrosCCDiscountAmount>Request </MigrosCCDiscountAmount>
+			<PaymentAmount>Request </PaymentAmount>
+			<ExtraDiscountAmount>Request </ExtraDiscountAmount>
+			<ProductBasedDiscountAmount>Request </ProductBasedDiscountAmount>
+		</MoneyCard>
+	</Transaction>
+	<SettlementInq>
+		<Date>Request </Date>
+		<TransactionSummList>
+			<TransactionSumm>
+				<CurrencyCode>Request </CurrencyCode> 
+				<Type>Request </Type>
+				<Count>Request </Count>
+				<Amount>Request </Amount>
+			</TransactionSumm>
+		</TransactionSummList>
+	</SettlementInq>
+</GVPSRequest>

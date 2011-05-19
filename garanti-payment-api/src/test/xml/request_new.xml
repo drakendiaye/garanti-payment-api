@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GVPSRequest>
+	<Mode>New Mode</Mode>
+	<Version>Nev Version</Version>
+	<ChannelCode>New ChannelCode</ChannelCode>
+	<Terminal>
+		<ProvUserID>New ProvUserID</ProvUserID>
+		<HashData>New HashData</HashData>
+		<UserID>New UserID</UserID>
+		<ID>New ID</ID>
+		<MerchantID>New MerchantID</MerchantID>
+	</Terminal>
+	<Customer>
+		<IPAddress>New IPAddress</IPAddress>
+		<EmailAddress>New EmailAddress</EmailAddress>
+	</Customer>
+	<Card>
+		<Number>New Number</Number>
+		<ExpireDate>New ExpireDate</ExpireDate>
+		<CVV2>New cvv2</CVV2>
+	</Card>
+	<Order>
+		<OrderID>New OrderID</OrderID>
+		<GroupID>New GroupID</GroupID>
+		<Description>New Description</Description>
+	</Order>
+	<Transaction>
+		<Type>New Type</Type>
+		<InstallmentCnt>New InstallmentCnt</InstallmentCnt>
+		<Amount>New Amount</Amount>
+		<CurrencyCode>New CurrencyCode</CurrencyCode>
+		<OriginalRetrefNum>New OriginalRetrefNum</OriginalRetrefNum>
+		<CardholderPresentCode>New CardholderPresentCode</CardholderPresentCode>
+		<MotoInd>New MotoInd</MotoInd>
+		<Secure3D>
+			<AuthenticationCode>New AuthenticationCode</AuthenticationCode>
+			<SecurityLevel>New SecurityLevel</SecurityLevel>
+			<TxnID>New TxnID</TxnID>
+			<Md>New Md</Md>
+		</Secure3D>
+	</Transaction>
+</GVPSRequest>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	
+	<xs:complexType name="HostMsgListType">
+		<xs:sequence>
+			<xs:element name="HostMsg" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ResponseType">
+		<xs:sequence>
+			<xs:element name="Source" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ReasonCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Message" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ErrorMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="SysErrMsg" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ResponseTransactionType">
+		<xs:sequence>
+			<xs:element name="Response" type="ResponseType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="RetrefNum" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="AuthCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="BatchNum" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="SequenceNum" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ProvDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="HostMsgList" type="HostMsgListType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="OrderInqResultType">
+		<xs:sequence>
+			<xs:element name="ChargeType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PreAuthAmount" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PreAuthDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="AuthAmount" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="AuthDate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ResponseOrderType">
+		<xs:sequence>
+			<xs:element name="OrderID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="OrderInqResult" type="OrderInqResultType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="GVPSResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Mode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Order" type="ResponseOrderType" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Transaction" type="ResponseTransactionType" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
