@@ -8,7 +8,7 @@
 		Integration project with Garanti payment system.
 	</description>
 	<packaging>jar</packaging>
-	<version>0.6</version>
+	<version>1.0</version>
 	<developers>
 		<developer>
 			<id>sevgi.uslu</id>
@@ -20,20 +20,30 @@
 			<timezone>GMT+2</timezone>
 		</developer>
 	</developers>
+
 	<repositories>
 		<repository>
-			<id>java.net</id>
-			<url>http://repo1.maven.org/maven2/</url>
-			<layout>legacy</layout>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+			<id>maven2-repository.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
 		</repository>
 	</repositories>
-		
+
+	<distributionManagement>
+		<repository>
+			<id>garanti-payment-api-repository</id>
+			<name>Maven Repository for garanti-payment-api</name>
+			<url>svn:https://garanti-payment-api.googlecode.com/svn/maven/repo</url>
+		</repository>
+		<snapshotRepository>
+			<id>garanti-payment-api-snapshot-repository</id>
+			<name>Maven Repository for garanti-payment-api (snapshot)</name>
+			<url>svn:https://garanti-payment-api.googlecode.com/svn/maven/snapshot-repo</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -47,12 +57,13 @@
 						</goals>
 					</execution>
 				</executions>
-			    <inherited>true</inherited>
-			    <configuration>
+				<inherited>true</inherited>
+				<configuration>
 					<schemaDirectory>src/main/resources/xsd</schemaDirectory>
-					<sourceGenerationDirectory>src/main/java</sourceGenerationDirectory>		
+					<sourceGenerationDirectory>src/main/java
+					</sourceGenerationDirectory>
 					<noJavac>true</noJavac>
-			    </configuration>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -68,12 +79,13 @@
 		</plugins>
 		<extensions>
 			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh</artifactId>
-				<version>1.0-beta-7</version>
+				<groupId>org.jvnet.wagon-svn</groupId>
+				<artifactId>wagon-svn</artifactId>
+				<version>1.9</version>
 			</extension>
 		</extensions>
 	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.xmlbeans</groupId>
@@ -93,4 +105,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 </project>
