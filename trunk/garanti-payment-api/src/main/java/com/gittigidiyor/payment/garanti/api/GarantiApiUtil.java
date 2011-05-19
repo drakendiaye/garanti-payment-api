@@ -57,7 +57,6 @@ class GarantiApiUtil {
 		return amountStr;
 	}
 	
-
     public static String getArrangedTerminalId(String terminalId) {
 		String arrangedId = terminalId;
 		if (!StringUtil.isNullOrZeroLength(arrangedId)) {
@@ -92,25 +91,4 @@ class GarantiApiUtil {
     public static String calculateHashAsDefaultAndUpperCase(String data) throws UnsupportedEncodingException, NoSuchAlgorithmException {        
         return calculateHash(data, "SHA-1", "ISO-8859-9").toUpperCase();
     }
-
-	public static void main(String[] args) {
-		
-		try {
-//			return hex_sha1("abc") == "a9993e364706816aba3e25717850c26c9cd0d89d";
-			System.out.println(GarantiApiUtil.calculateHashAsDefaultAndUpperCase("abc"));
-			
-			String securityData = "provAUT123"+"010000039";
-			
-			String securityHash = GarantiApiUtil.calculateHashAsDefaultAndUpperCase(securityData);
-
-			System.out.println(securityHash);
-			String allData = "MyOrder1" + "10000039" + "4672950000594262" + "100" + securityHash;
-			String hashedData = GarantiApiUtil.calculateHashAsDefaultAndUpperCase(allData);
-			
-			System.out.println(hashedData);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
 }
