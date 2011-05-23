@@ -5,7 +5,7 @@
 	<artifactId>garanti-payment-api</artifactId>
 	<name>Garanti Bank Payment Api</name>
 	<description>
-		Integration project with Garanti payment system.
+		Integration project with Garanti payment system. 
 	</description>
 	<packaging>jar</packaging>
 	<version>1.1-beta</version>
