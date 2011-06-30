@@ -6,22 +6,18 @@ class GarantiApiException extends Exception{
 
 	public GarantiApiException() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public GarantiApiException(String message, Throwable cause) {
 		super(message, cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	public GarantiApiException(String message) {
 		super(message);
-		// TODO Auto-generated constructor stub
 	}
 
 	public GarantiApiException(Throwable cause) {
 		super(cause);
-		// TODO Auto-generated constructor stub
 	}
 
 }
