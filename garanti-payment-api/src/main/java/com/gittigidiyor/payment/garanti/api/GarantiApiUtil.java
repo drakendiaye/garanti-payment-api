@@ -3,11 +3,14 @@ package com.gittigidiyor.payment.garanti.api;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
 
 class GarantiApiUtil {
+	
+	private static DecimalFormat decimalFormat = new DecimalFormat("#.##");
 	
 	public static String getDefaultModeIfNecessary(String mode){
 		String validMode = GarantiApiConstants.MODE_DEFAULT;
@@ -45,13 +48,16 @@ class GarantiApiUtil {
 		return installmentStr;
 	}
 	
+	public static double round(double number) {
+		return Double.parseDouble(decimalFormat.format(number));
+	}
+	
 	public static String getAmountAsString(Double amount) {
 		String amountStr = "0";
 		
 		if(amount != null){
-			amount = amount * 100;
-			Integer amountKrs = amount.intValue();
-			amountStr = amountKrs.toString();
+			amount = GarantiApiUtil.round(100 * amount); 
+			amountStr = String.valueOf(amount.intValue());
 		}
 
 		return amountStr;
