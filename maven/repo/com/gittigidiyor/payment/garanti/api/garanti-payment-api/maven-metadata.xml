@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><metadata>
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xsi:schemaLocation="http://maven.apache.org/METADATA/1.0.0 http://maven.apache.org/xsd/metadata-1.0.0.xsd" xmlns="http://maven.apache.org/METADATA/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <groupId>com.gittigidiyor.payment.garanti.api</groupId>
   <artifactId>garanti-payment-api</artifactId>
   <versioning>
@@ -8,7 +10,8 @@
       <version>1.0-beta</version>
       <version>1.0</version>
       <version>1.2-beta</version>
+      <version>1.3-beta</version>
     </versions>
-    <lastUpdated>20110712085416</lastUpdated>
+    <lastUpdated>20111130082648</lastUpdated>
   </versioning>
 </metadata>
