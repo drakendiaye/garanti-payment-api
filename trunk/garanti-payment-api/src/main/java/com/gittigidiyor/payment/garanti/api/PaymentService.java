@@ -42,6 +42,7 @@ class PaymentService {
 		    responseXml = stringBuilder.toString();
 		    reader.close();
 		} catch(Exception e ){
+			e.printStackTrace();
 			throw new GarantiApiException("Error Occured During Posting XmlData.", e.getCause());
 		} 			
 
